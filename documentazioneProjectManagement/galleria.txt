@@ -1,0 +1,49 @@
+ OBIETTIVI:
+promozione delle attività della galleria a scopo vendita quadri ossia:
+- mostre temporanee di più artisti
+-esposizione monotematica di un solo artista o di un periodo storico
+
+
+
+REQUISITI/FUNZIONALITA':
+
+-grafica raffinata, curata per un pubblico tra i 35 e 60 anni, quindi UI user friendly con testo leggibile (variazione del font)???? oppure nei settings 
+
+
+-L’app deve consentire di visualizzare la lista delle opere edegli artisti esposti dalla galleria, con la possibilità diaccedere al dettaglio delle singole opere e dei singoli artisti 
+(VEDI bozze da fare)
+
+-L’applicazione deve consentire di accedere alle informazionisu un’opera fotografando il codice QR associato all’opera
+(da chiedere a Paolo)
+
+- L’applicazione deve presentare una lista di percorsi di visitae di scoperta della galleria
+
+
+Dati degli artisti:
+
+- nominativo
+-data di nascita
+-corrente artistica 
+-biografia
+-mostre
+-foto
+
+Dati delle opere:
+immagine 480*320 pixel 
+iphone5 retina display  1136x640 489*320
+
+Android ha come dimensioni 480*800
+-titolo
+-data 
+-prezzo -> quindi la posso comperare?? 
+-descrizione 
+
+Percorsi di visita ma anche no 
+piuttosto altre funzionalità 
+
+
+
+
+
+
+

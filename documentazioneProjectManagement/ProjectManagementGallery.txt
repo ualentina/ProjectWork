@@ -1,0 +1,197 @@
+STAKEHOLDERS
+
+-responsabile della galleria
+-artisti che espongono
+-utenti della galleria
+-mercanti d’arte
+
+AMBITO/OBIETTIVI
+
+Promozione delle attività della galleria a scopo vendita quadri ossia:
+
+- mostre temporanee di più artisti
+- esposizione monotematica di un solo artista o di un periodo storico
+
+Descrizione tecnica del progetto:
+
+App per dispositivo mobile quale Iphone dalla versione 5.1 in poi e Android. Consisterà in una serie di screen con queste funzionalità:
+
+-l’app deve consentire di visualizzare la lista delle opere e degli artisti esposti dalla galleria, con la possibilità di accedere al dettaglio delle singole opere e dei singoli artisti 
+
+-l’applicazione deve consentire di accedere alle informazioni su un’opera fotografando il codice QR associato all’opera
+
+- l’applicazione deve presentare una lista di esibizioni (presenti, passate e future) con evidenza della corrente esposizione in corso
+
+Deliverable
+
+Al termine, dopo verifica del cliente, app verrà caricata sul market Apple Store e Google Play rendendo così l’app pubblica e pronta per la distribuzione.
+Si rilascerà documentazione tecnica quale manuale dell'app per utente, non si rilascia il codice sorgente.
+
+Limiti e criticità
+
+Possibile rifiuto da parte di Apple, in caso di rifiuto si chiude il contratto, il cliente pagherà quanto realizzato finora, su richiesta si procederà ad un ulteriore sviluppo.
+
+Assunto
+Il cliente sa che l’app verrà resa disponibile al market previa approvazione della Apple e di Google. 
+Il cliente si assume la responsabilità per il materiale fornito soggetto a copyright, non ci si assume in ogni caso e per qualsivoglia fattispecie, alcuna responsabilità per un eventuale infrangimento.  
+Il cliente inoltre accetta il disclaimer legale per limitazione di responsabilità in allegato.
+
+WORK BREAKDOWN STRUCTURE
+WORK PACKAGE -> SEQUENZA, E PRIORITA’
+-brainstorming  preliminare con il cliente per analisi dei requisiti, esigenze ed obiettivi dello stesso
+-analisi/revisione interna dei requisiti espressi dal cliente anche in relazione alla soluzione tecnologica da adottare
+-progettazione: realizzazione di un mockup grafico e presentazione delle funzionalità dell’applicazione e successiva verifica con il cliente a scopo feedback 
+-acquisizione dei materiali (immagini in formato png, testi, ecc..) forniti dal committente 
+-sviluppo dell’app e contestuale integrazione con il materiale fornito dal cliente
+
+-attività di testing e manualistica
+-rilascio al cliente
+
+VERIFICHE E MODIFICHE
+-verifica da parte del cliente a distanza di due settimane
+-eventuali modifiche in corsa 
+
+RISORSE
+Due sviluppatori iOs, due sviluppatori Android
+Due grafici
+Un tester
+
+DURATA
+Si stima un mese- un mese e mezzo circa. -> in realtà 1 settimana, 1 settimana e mezza, con un paio di pomeriggi di lavoro del grafico
+
+
+COSTI
+Da valutare se a costo del lavoro a ore o a corpo, inoltre dipende dalla complessità della scelta tecnologica e dal tipo di prototipo scelto.
+
+Due scenari:
+1) il cliente ha una infrastruttura  preesistente come un sito web aziendale con web service esposto alla rete. L' app può accedere ai dati via HTTP.
+Vantaggio: il cliente ha l'app sempre aggiornata in quanto gestisce in autonomia i propri contenuti. 
+Svantaggio: per l'utente dell'app, richiede connessione a internet. 
+Criticità: il cliente si assume la responsabilità di mantenere costantemente attivo il proprio server web.
+
+
+2) il cliente non ha infrastruttura esistente o comunque non vuole esporre i suoi dati all'esterno. L'app conterrà al suo interno le immagini e il contenuto che il cliente fornirà nei tempi stabiliti.
+Vantaggio: app presente sempre nel device dell'utente
+Svantaggio: app pesante come quantità di spazio occupato nella memoria del device, inoltre qualora si presenti la necessità di aggiornamento, il cliente pagherà i costi sostenuti.
+Se il cliente prevede un tot di aggiornamenti annuali ad esempio tre in un anno solare, si converrà a un pacchetto " a  forfait" oltre al costo di realizzazione.
+
+
+Nel caso in oggetto, per 8 schermate si stima: 
+
+190 € programmatore junior + iva 
+250-300 € programmatore senior  + iva 
+
+per un totale di 60 ore.
+
+_____________________
+
+Nuove features:
+- animazione nel passaggio da home a view selezionata
+- in home inserire la locandina della ultima mostra quindi caricamento dinamico (le altre immagini saranno fornite dal cliente)
+-condivisione sui social network
+-zoom sulle immagini
+-augmented reality
+
+
+Prossimi passi:
+
+-definizione del Data Model
+-definizione Business Logic secondo logica iOS (passaggio di valori tra view)
+-ricerca di un feed xml per immagini / lettura da flickr
+-creazione di un xml strutturato secondo data model per immagini, artisti, esibizioni, opere
+-preparazione immagini: scelta delle dimensioni delle immagini grandi e piccole 
+-preparare stili grafici (scelta del font, della dimensione dei caratteri, dei colori)
+-studiare UIViewCollection e Gallery vedi esempio Carousel
+-studiare come gestire zoom sulle immagini 
+-studiare librerie Social di iOS per condivisione contenuto da app su Twitter, FB ecc
+-chiedere a Paolo per QR Code
+-se c'è tempo, studiare documentazione su Augmented Reality
+
+
+ENTITA':
+ARTISTA
+- ID PKEY UNIQUE 
+-nome stringa
+-cognome stringa
+-data di nascita NSDate
+-corrente artistica ?
+-una o più immagini,  stringa che è path dell'immagine
+-una collection di opere (NSMutableArray)
+
+OPERA
+-id opera
+-id_artista
+-titolo stringa
+-data creazione data 
+-id esibizione
+-img piccola path dell'immagine 
+-img grande path dell'immagine
+-
+
+
+ESPOSIZIONE
+-id esposizione
+-titolo
+-data inizio
+-data fine
+-array di opere 
+
+CORRENTE ARTISTICA
+-id intero
+-nome_corrente stringa
+
+Galleria (?)
+-nome
+-indirizzo
+-telefono
+-cell
+-email
+-
+
+
+
+REVISIONE CON PAOLO
+UIBUTTON CON IMMAGINI PER HOME
+- in alternativa, uiimage view con grafica e sopra uibutton trasparente
+far capire che le immagini sono cliccabili occhio ai font e alle immagini che sia tutto visibile
+
+XML O FEED RSS O ALTRO A DISPOSIZIONE DEL CLIENTE
+
+
+-dimensione immagini 320 * 480 
+larghezza min 300 
+
+480-20 di status bar
+ok barra di stato
+
+portrait e basta
+meglio zoom che cambio orientamento
+
+ARTISTI:
+home da togliere da tutte le schermate, è un errore "tecnico" nel senso che se lo metti ti dà errore di compilazione…quindi per la Rigutti un prototipo a parte
+
+
+mostre idem
+dettaglio opere da scrollare in verticale, se orizzontale ci vogliono i pallini
+
+DETTAGLIO OPERA: testo e foto si muovono assieme scrollview 
+
+
+- file plist o xml per leggere i dati di artisti immagini dcc
+
+myind.it social di confindustria
+
+
+- REALTA' AUMENTATA
+libreria layar (lavora in collegamento al server)
+bussola e gps 
+per la galleria si lavora di bussola
+mappare la posizione sulla stanza
+180 gradi nord c'è X, a 190 gradi nord c'è Y…e sul video compaiono le immagini (tratte da un db locale)
+
+
+guardare dimensioni tab bar e barra di stato e di navigazione
+
+
+
+http://www.gartner.com/newsroom/id/2482816 link con i dati delle vendite smartphone
